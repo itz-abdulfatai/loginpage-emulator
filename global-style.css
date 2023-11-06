@@ -1,61 +1,75 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
 
 /* header */
 
 header {
-display: flex;
-padding: 0 15px;
-justify-content: space-between;
-align-items: center;
-position: relative;
-z-index: 99;
-background-color: #ffff;
+  display: flex;
+  padding: 0 15px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background: #ffff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99;
 }
 
 div.menu {
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
-width: 25px;
-height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
 }
 
 div.menubar {
-    border: solid 1px;
+  border: solid 1px;
 }
 ul {
-list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 li {
-    height: 30px;
-    border-bottom: solid 1px #00000015;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+  height: 30px;
+  border-bottom: solid 1px #00000015;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 nav {
-    position: absolute;
-    top: 30px;
-    left: 0;
-    right: 0;
-    /* background-color: rgb(224, 123, 123); */
-    animation: move ease-in-out 6s infinite;
-    z-index: -5;
-    padding: 10px;
-}
-a {
-    text-decoration: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  /* background-color: rgb(224, 123, 123); */
+  /* animation: move ease-in-out 5s infinite; */
+  z-index: -5;
+  padding: 10px;
+  top: -150px;
+  transition: top 1s ease;
+  background-color: #ffff;
 }
 
+.shown {
+  top: 30px;
+}
+a {
+  text-decoration: none;
+}
+li:hover {
+  background-color: #00000015;
+  border-bottom: solid 1px #00000000;
+}
 /* @keyframes move {
     0% {
         top: -100px;
@@ -70,3 +84,7 @@ a {
     }
     
 } */
+
+main {
+  margin-top: 38px;
+}
